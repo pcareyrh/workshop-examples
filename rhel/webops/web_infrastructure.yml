@@ -6,6 +6,11 @@
     yum:
       name: httpd
       state: latest
+      
+  - name: install selinux modules
+    yum:
+      state: latest
+      name: python3-libsemanage
 
   - name: install apache proxy definition
     copy:
